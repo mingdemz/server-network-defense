@@ -1,0 +1,36 @@
+{
+  "rate_limit": {
+    "window_seconds": 10,
+    "max_requests": 30,
+    "ban_seconds": 60
+  },
+  "request_max_bytes": 1048576,
+  "high_risk_ports": [21, 23, 135, 139, 445, 1433, 1521, 3306, 3389, 5432, 5900, 6379, 27017],
+  "allowlist_ips": [],
+  "sensitive_paths": [
+    ".env",
+    ".git",
+    ".svn",
+    ".htaccess",
+    ".htpasswd",
+    "wp-login.php",
+    "wp-config.php",
+    "xmlrpc.php",
+    "phpmyadmin",
+    "adminer.php",
+    "web.config",
+    "id_rsa",
+    "/etc/passwd",
+    "/etc/shadow",
+    "server-status",
+    "actuator",
+    ".aws/credentials"
+  ],
+  "connection_threshold": 80,
+  "brute_force": {
+    "window_seconds": 60,
+    "max_4xx": 15,
+    "status_codes": [401, 403, 404, 429]
+  },
+  "alert_log": "defense_alerts.log"
+}
